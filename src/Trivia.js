@@ -21,28 +21,29 @@ const Trivia = () => {
 
             <Container>
                 <h1 className="display-1 text-center">Trivia</h1>
+                <h1 className="display-4 text-center text-muted">Random trivia</h1>
                 <Row className="mt-4">
                     <Col>
 
                         <Card bg="primary" text="light" className="mx-auto" style={{ width: '18rem' }}>
-                            <Card.Header>Random Trivia</Card.Header>
+
                             <Card.Body>
-                                <Card.Title>Question</Card.Title>
+                                <Card.Title>Question:</Card.Title>
                                 <Card.Text>
                                     {trivia.question}
                                 </Card.Text>
                             </Card.Body>
                         </Card>
                         <Card bg="success" text="light" className="mx-auto mt-4" style={{ width: '18rem' }}>
-                            <Card.Header>Random Trivia</Card.Header>
+
                             <Card.Body>
-                                <Card.Title>Answer</Card.Title>
+                                <Card.Title>Answer:</Card.Title>
                                 <Card.Text>
                                     {trivia.answer}
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-                        
+
                     </Col>
                 </Row>
                 <Row>

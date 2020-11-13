@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./style2.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { Navbar, Nav } from "react-bootstrap";
 import AllJokes from "./AllJokes";
 import AllScrape from "./AllScrape";
 import Trivia from "./Trivia";
@@ -137,7 +137,7 @@ function Scrape() {
 function Admin() {
   return (
     <div className="pageContent">
-      <Trivia/>
+      <Trivia />
     </div>
   );
 }

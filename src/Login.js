@@ -62,9 +62,9 @@ function LoggedIn() {
 
   return (
     <div>
-      <h2>Data Received from server</h2>
+      <h1 className="display-4 text-muted">Data Received from server</h1>
       <h3>{dataFromServer}</h3>
-      <p>{errorMessage}</p>
+      <p className="mt-4 text-danger">{errorMessage}</p>
     </div>
   )
 

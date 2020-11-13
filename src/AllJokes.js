@@ -24,6 +24,8 @@ const AllJokes = () => {
                 <h1 className="text-center display-1">Jokes</h1>
                 <Row className="mt-4">
                     <Col>
+                    </Col>
+                    <Col>
                         <Card border="primary" className="mx-auto" style={{ width: '18rem' }}>
                             <Card.Header>Chuck Norris Joke:</Card.Header>
                             <Card.Body>
@@ -45,10 +47,12 @@ const AllJokes = () => {
                             </Card.Body>
                         </Card>
                     </Col>
+                    <Col>
+                    </Col>
                 </Row>
                 <Row>
                     <Col className="text-center">
-                        <Button variant="primary mt-3" onClick={() => fetchAllJokes()}>Get new jokes</Button>
+                        <Button variant="primary mt-4" onClick={() => fetchAllJokes()}>Get new jokes</Button>
                     </Col>
                 </Row>
             </Container>
