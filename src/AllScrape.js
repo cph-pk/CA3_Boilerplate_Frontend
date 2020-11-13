@@ -30,13 +30,13 @@ const AllScrape = () => {
             <Container>
                 <Row>
                     <Col>
-                        <h2>Fetching</h2>
+                        <h1 className="display-1 text-center">Fetching</h1>
                     </Col>
                 </Row>
 
                 <Row className="mt-4">
                     <Col>
-                        <Table bordered hover size="sm">
+                        <Table striped bordered hover size="sm">
                             <thead>
                                 <tr>
                                     <th colSpan="2">{sequental.title}<br></br>
@@ -55,7 +55,7 @@ const AllScrape = () => {
                     </Col>
                     <Col>
 
-                        <Table bordered hover size="sm">
+                        <Table striped bordered hover size="sm">
                             <thead>
                                 <tr>
                                     <th colSpan="2">{parallel.title}<br></br>
@@ -77,7 +77,7 @@ const AllScrape = () => {
                 <Row>
 
                     <Col className="text-center">
-                        <Button className="mt-4" variant="primary" onClick={() => { fetchAllSequental(); fetchAllParallel() }}>Fetch scrape</Button>{' '}
+                        <Button className="mt-4" variant="info" onClick={() => { fetchAllSequental(); fetchAllParallel() }}>Fetch scrape</Button>{' '}
                     </Col>
 
                 </Row>

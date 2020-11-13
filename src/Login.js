@@ -18,31 +18,22 @@ function LogIn({ login }) {
   return (
     <div>
 
-      <Container>
-        <Row>
-          <Col>
-          </Col>
-          <Col>
-            <h2>Login</h2>
-            <Form onChange={onChange} className="mt-4">
-              <Form.Group controlId="username">
-                <Form.Label>Username</Form.Label>
-                <Form.Control type="text" placeholder="Enter username" />
-              </Form.Group>
-              <Form.Group controlId="password">
-                <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Enter password" />
-              </Form.Group>
-              <Button onClick={performLogin} variant="primary" type="submit">
-                Login
-                </Button>
-            </Form>
-          </Col>
-          <Col>
-          </Col>
-        </Row>
-      </Container>
-    </div>
+      <h1 className="display-1">Login</h1>
+      <Form onChange={onChange} className="mt-4">
+        <Form.Group controlId="username">
+          <Form.Label>Username</Form.Label>
+          <Form.Control type="text" placeholder="Enter username" />
+        </Form.Group>
+        <Form.Group controlId="password">
+          <Form.Label>Password</Form.Label>
+          <Form.Control type="password" placeholder="Enter password" />
+        </Form.Group>
+        <Button onClick={performLogin} variant="primary" type="submit">
+          Login
+        </Button>
+      </Form>
+
+    </div >
   )
 
 }
@@ -127,14 +118,33 @@ function Login({ setLoginStatus, isLoggedIn, setAdminStatus }) {
     <div className="pageContent">
       {!isLoggedIn ? (
         <>
-          <LogIn login={login} />
-          <p>{errorMessage}</p>
+          <Container>
+            <Row>
+              <Col>
+              </Col>
+              <Col>
+                <LogIn login={login} />
+              </Col>
+              <Col>
+              </Col>
+            </Row>
+
+            <Row>
+              <Col>
+              </Col>
+              <Col>
+                <p className="mt-4 text-danger">{errorMessage}</p>
+              </Col>
+              <Col>
+              </Col>
+            </Row>
+          </Container>
         </>
       ) :
         (<div>
           <LoggedIn />
 
-          <button onClick={logout}>Logout</button>
+          <Button variant="secondary" onClick={logout}>Logout</Button>
 
         </div>)}
     </div>
