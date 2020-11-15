@@ -13,7 +13,15 @@ const Header = ({ isLoggedIn, loginMsg, isAdmin, loginName }) => {
   return (
     <>
       <Navbar bg="dark" variant="dark" id="header">
-        <Navbar.Brand href="#home">Hold E, Gruppe 8</Navbar.Brand>
+        <Navbar.Brand href="#home">
+          <img
+            alt=""
+            src="/mylogo.png"
+            width="30"
+            height="30"
+            className="d-inline-block align-top"
+          />{' '}
+      Hold E, Gruppe 8</Navbar.Brand>
         <Nav className="mr-auto">
           <NavLink className="nav-link" exact activeClassName="selected" href="/" to="/">
             Home
@@ -114,7 +122,7 @@ export default function App() {
 function Home() {
   return (
     <div className="pageContent">
-      <Reflection/>
+      <Reflection />
     </div>
   );
 }
